@@ -1,0 +1,148 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('https://cdn3.vectorstock.com/i/thumb-large/78/57/blue-tic-tac-toe-game-icon-isolated-seamless-vector-35927857.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      width: 80%;
+      margin: auto;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      border-radius: 3rem;
+      box-sizing: border-box;
+
+    }
+
+    h1 {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: goldenrod;
+      font-weight: bolder;
+      box-sizing: border-box;
+
+    }
+
+    .game-box {
+      margin: auto;
+      padding: 30px 50px 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      box-sizing: border-box;
+    }
+
+    .box {
+      border: 2px solid rgb(183, 46, 153);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: #000;
+      font-weight: bolder;
+      font-size: 30px;
+      height: 80px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .box:hover {
+      background-color: grey;
+      transition: 0.5s all;
+    }
+
+    button {
+      display: none;
+      width: auto;
+      margin: auto;
+      font-weight: bolder;
+      margin-bottom: 1rem;
+      padding: 10px 30px;
+      font-size: 20px;
+      background-color: goldenrod;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .win {
+      background-color: lightgreen;
+      animation: winner 0.5s infinite;
+    }
+
+    @keyframes winner {
+
+      0%,
+      100% {
+        background-color: rgb(208, 127, 35);
+      }
+
+      50% {
+        background-color: transparent;
+      }
+    }
+
+    span {
+      margin: -1.2rem auto;
+      padding: 0 2rem;
+      width: fit-content;
+      background-color: #000;
+      color: rgb(240, 68, 102);
+      font-family: monospace;
+      font-size: 25px;
+      font-weight: bolder;
+      letter-spacing: -1px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      color: rgb(196, 44, 44);
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 501px) {
+      .container {
+        width: 90%;
+      }
+
+      .box {
+        height: 50px;
+      }
+    }
